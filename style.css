@@ -1,0 +1,192 @@
+/* Reset */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+/* Root */
+
+:root {
+  --color-primary: #234894;
+  --color-secondary: #afcedd;
+  --color-btn: #219f95;
+  --border-radius: 8px;
+}
+
+/* Html */
+
+html {
+  font-size: 62.5%;
+}
+/* Body */
+
+body {
+  font-family: Vazirmatn, sans-serif;
+ 
+}
+/* Container and Title */
+.memebership-requests {
+  display: flex;
+  flex-direction: column;
+ margin: 5rem 5rem;
+  
+}
+.memebership-requests__title {
+  align-self: flex-end;
+}
+
+.memebership-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* height: 450px; */
+  column-gap: 3rem;
+  row-gap: 2rem;
+  justify-content: center;
+  position: relative;
+}
+
+/* Membership Cards */
+.membership-card {
+  padding: 2rem;
+  padding-right: 0;
+}
+
+.membership-card__header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-bottom: 1.3rem;
+}
+.membership-request-number {
+  background-color: var(--color-secondary);
+  display: inline-block;
+  padding: 0.5rem 1.3rem;
+  border-radius: 6px;
+  margin-left: 0.8rem;
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+.membership-card__header__title {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.membership-card__header__title,
+.membership-request-number {
+  color: var(--color-primary);
+}
+.request-details__id,
+.request-date {
+  color: #696969;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.membership-card__header > div {
+  display: flex;
+  align-items: center;
+}
+
+.request-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.request-user > div {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.request-details__title {
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+.request-user__name {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.request-user__avatar {
+  border-radius: var(--border-radius);
+  margin-left: 0.8rem;
+  width: 3rem;
+}
+.request-user {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Button */
+.visit-request-button {
+  background-color: var(--color-btn);
+  border-radius: var(--border-radius);
+  border: none;
+  color: #fff;
+  font-family: Vazirmatn;
+  padding: 2rem 1.5rem;
+  display: inline-block;
+}
+.memebership-requests__title {
+  font-weight: 900;
+  font-size: 2.2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .memebership-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .membership-request-number {
+    font-size: 1.6rem;
+  }
+  .membership-card__header__title {
+    font-size: 1.4rem;
+  }
+  .request-details__id,
+  .request-date {
+    font-size: 1rem;
+  }
+  .request-details__title {
+    font-size: 1.6rem;
+  }
+  .request-user__name {
+    font-size: 1.4rem;
+  }
+  .visit-request-button {
+    padding: 1.7rem 1.2rem;
+  }
+  .memebership-requests__title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .memebership-cards {
+    grid-template-columns: 1fr;
+
+    justify-content: center;
+  }
+  .membership-request-number {
+    font-size: 1.3rem;
+  }
+  .membership-card__header__title {
+    font-size: 1.2rem;
+  }
+  .request-details__title {
+    font-size: 1.4rem;
+  }
+  .request-user__name {
+    font-size: 1.2rem;
+  }
+  .visit-request-button {
+    padding: 1.5rem 1rem;
+  }
+  .memebership-requests__title {
+    font-size: 1.8rem;
+  }
+}
+/* .membership-card {
+  background-color: #ccc;
+} */
