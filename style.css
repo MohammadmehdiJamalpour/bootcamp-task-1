@@ -26,14 +26,14 @@ html {
 
 body {
   font-family: Vazirmatn, sans-serif;
- 
 }
 /* Container and Title */
+
 .memebership-requests {
   display: flex;
   flex-direction: column;
- margin: 5rem 5rem;
-  
+  justify-content: center;
+  margin: 5rem 12rem;
 }
 .memebership-requests__title {
   align-self: flex-end;
@@ -43,9 +43,10 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* height: 450px; */
-  column-gap: 3rem;
-  row-gap: 2rem;
-  justify-content: center;
+  column-gap: 7rem;
+  row-gap: 5rem;
+  justify-content: space-between;
+  align-content: space-between;
   position: relative;
 }
 
@@ -130,6 +131,9 @@ body {
   padding: 2rem 1.5rem;
   display: inline-block;
 }
+.visit-request-button:hover {
+  cursor: pointer;
+}
 .memebership-requests__title {
   font-weight: 900;
   font-size: 2.2rem;
@@ -138,6 +142,11 @@ body {
 @media screen and (max-width: 1024px) {
   .memebership-cards {
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 2rem;
+  }
+  .memebership-requests {
+    margin: 5rem 5rem;
   }
   .membership-request-number {
     font-size: 1.6rem;
@@ -165,8 +174,12 @@ body {
 @media screen and (max-width: 640px) {
   .memebership-cards {
     grid-template-columns: 1fr;
-
     justify-content: center;
+    column-gap: 1rem;
+  }
+
+  .memebership-requests {
+    margin: 4rem 3rem;
   }
   .membership-request-number {
     font-size: 1.3rem;
